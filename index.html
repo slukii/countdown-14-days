@@ -1,31 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Launch countdown timer</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+
+    :root{
+      --primary-color: hsl(237, 18%, 59%);
+      --secondary-color: hsl(345, 95%, 68%);
+      --white-color: hsl(0, 0%, 100%);
+      --dark-desatureted-blue: hsl(236, 21%, 26%);
+      --very-dark-blue: hsl(235, 16%, 14%);
+      --very-very-dark-blue: hsl(234, 17%, 12%);
+      font-size: 14px;
+    }
+
+    body{
+      margin:0; padding:0; box-sizing: border-box;
+      background: url(images/bg-stars.svg), url(images/pattern-hills.svg), linear-gradient(180deg, hsl(234, 17%, 12%) 0%, hsl(236, 21%, 26%) 100%);
+      background-repeat: no-repeat,no-repeat,no-repeat;
+      background-size: cover,auto,cover;
+      background-attachment: fixed,fixed,fixed;
+      background-position: center center,center bottom;
+      height: 100vh;
+      font-family: 'Red Hat Text', sans-serif;
+    }
+
+    main{
+      height: 95vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    main h1 {
+      color: var(--white-color)
+    }
+
+
+    main section.social-medias{
+      width: 187.5px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    main section.social-medias img{
+      box-shadow: 0 0 0 100000px var(--secondary-color) inset;
+    }
+
+    main section.social-medias img:hover{
+      cursor:pointer;
+    }
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 
-  We're launching soon
+  <main>
 
-  Days
-  Hours
-  Minutes
-  Seconds
-  
+    <h1>We're launching soon</h1> 
+    
+    <section class="timer">
+      <section class="timer-in-days">
+        <div class="box-top"></div>
+        <div class="box-bottom"></div>
+        <span class="time-in-days">00</span>
+        <h3>Days</h3>
+      </section>
+
+      <section class="timer-in-hours">
+        <div class="box-top"></div>
+        <div class="box-bottom"></div>
+        <span class="time-in-hours">00</span>
+        <h3>Hours</h3>
+      </section>
+
+      <section class="timer-in-minutes">
+        <div class="box-top"></div>
+        <div class="box-bottom"></div>
+        <span class="time-in-minutes">00</span>
+        <h3>Minutes</h3> 
+      </section>
+
+      <section class="timer-in-seconds">
+        <div class="box-top"></div>
+        <div class="box-bottom"></div>
+        <span class="time-in-seconds">00</span>
+        <h3>Seconds</h3> 
+      </section>
+    
+    </section>
+
+    <section class="social-medias">
+      <img src="images/icon-facebook.svg" alt="icone do facebook">
+      <img src="images/icon-pinterest.svg" alt="icone do pinterest">
+      <img src="images/icon-instagram.svg" alt="icone do instagram">
+    </section>
+</main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Bruno Santos</a>.
   </div>
 </body>
 </html>
