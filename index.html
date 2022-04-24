@@ -26,7 +26,7 @@
 
     body{
       margin:0; padding:0; box-sizing: border-box;
-      background: url(images/pattern-hills.svg), url(images/bg-stars.svg), linear-gradient(180deg, hsl(234, 17%, 12%) 0%, hsl(236, 21%, 26%) 100%);
+      background: url(images/pattern-hills.svg), url(images/bg-stars.svg), linear-gradient(180deg, var(--very-very-dark-blue) 0%, var(--dark-desatureted-blue) 100%);
       background-repeat: no-repeat,no-repeat,no-repeat;
       background-size: auto,cover,cover;
       background-attachment: fixed,fixed,fixed;
@@ -54,6 +54,38 @@
       justify-content: space-around;
     }
 
+    main section.timer section div{
+      width: 12vw; height: 18vh;
+    }
+
+    main section.timer section div.box-top{
+      background-color: var(--very-dark-blue);
+      border-bottom-right-radius:10px ; border-bottom-left-radius: 10px;
+      border-top-left-radius: 5px; border-top-right-radius: 5px;
+    }
+
+    main section.timer section div.box-bottom{
+      background-color: var(--dark-desatureted-blue);
+      border-top-right-radius:10px ; border-top-left-radius: 10px;
+      border-bottom-right-radius:5px ; border-bottom-left-radius: 5px;
+      margin-top: .3vh;
+      box-shadow: 0px 9px 15px 5px rgba(0,0,0,0.61);
+      
+    }
+
+    main section.timer section span{
+      position: absolute;
+      font-size: 6rem;
+      margin-top:-27vh; margin-left: 2vw;
+      color: var(--secondary-color);
+      opacity: 0.7;
+    }
+
+    main section.timer section h3{
+      text-align: center;
+      color:var(--primary-color)
+    }
+
     main section.social-medias{
       width: 187.5px;
       display: flex;
@@ -69,7 +101,7 @@
     }
 
     main section.social-medias svg:hover path{
-      fill:hsl(345, 95%, 68%);
+      fill:var(--secondary-color);
     }
 
     .attribution { font-size: 11px; text-align: center; }
